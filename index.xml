@@ -1,12 +1,22 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Rifqiabidin Blog</title>
+    <title>Record</title>
     <link>https://rifqiabidin.github.io/</link>
-    <description>Recent content on Rifqiabidin Blog</description>
+    <description>Recent content on Record</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <lastBuildDate>Fri, 06 Oct 2023 16:19:20 +0700</lastBuildDate><atom:link href="https://rifqiabidin.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <language>id-id</language>
+    <lastBuildDate>Mon, 09 Oct 2023 06:00:30 +0700</lastBuildDate><atom:link href="https://rifqiabidin.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Data Fellowship IYKRA</title>
+      <link>https://rifqiabidin.github.io/posts/data-fellowship-iykra/</link>
+      <pubDate>Mon, 09 Oct 2023 06:00:30 +0700</pubDate>
+      
+      <guid>https://rifqiabidin.github.io/posts/data-fellowship-iykra/</guid>
+      <description>Melakukan career switch merupakan salah satu pilihan yang tidak mudah bagi saya, penjelasan lebih lengkapnya ada di tulisan saya yang berjudul perjalanan karir. Banyak faktor yang menjadi pertimbangan untuk keputusan tersebut. Pada akhirnya kita menjalani hidup atas pilihan-pilihan kita sendiri, so, be it.
+Sebenarnya banyak opsi untuk melakukan career switch, Salah satu cara yang pernah saya lakukan adalah sewaktu ada internal hiring saat saya bekerja sebagai marketing technology di Grab. Secara workload, pekerjaannya tidak berubah terlalu banyak, hanya cakupan counterpart yang semakin luas.</description>
+    </item>
+    
     <item>
       <title>Perjalanan Karir</title>
       <link>https://rifqiabidin.github.io/posts/perjalanan-karir/</link>
