@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Posts on Record</title>
+    <title>Posts on Records</title>
     <link>https://rifqiabidin.github.io/post/</link>
-    <description>Recent content in Posts on Record</description>
+    <description>Recent content in Posts on Records</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>id-id</language>
     <lastBuildDate>Mon, 04 Nov 2024 09:46:31 +0700</lastBuildDate><atom:link href="https://rifqiabidin.github.io/post/index.xml" rel="self" type="application/rss+xml" />
@@ -13,7 +13,7 @@
       <pubDate>Mon, 04 Nov 2024 09:46:31 +0700</pubDate>
       
       <guid>https://rifqiabidin.github.io/post/exploring-datalore/</guid>
-      <description>Data-data everywhere</description>
+      <description></description>
     </item>
     
   </channel>
