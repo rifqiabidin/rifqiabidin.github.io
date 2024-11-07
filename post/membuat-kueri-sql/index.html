@@ -57,7 +57,7 @@
   
   
   
-  <meta name="description" content="Melakukan pengambilan data dari database merupakan salah satu tugas dasar dari berbagai role di bidang data. Pengambilan data menggunakan pernyataan SELECT. Meskipun sekilas terdengar sederhana, penggunaan SELECT ini bisa dibilang rumit karena memungkinkan kita untuk melakukan pembuatan berbagai kueri yang sangat fleksibel dengan berbagai ketentuan yang mengikutinya.
+  <meta name="description" content="Melakukan pengambilan data dari database merupakan salah satu tugas dasar dari berbagai role di bidang data. Pengambilan data menggunakan pernyataan SELECT. Meskipun sekilas terdengar sederhana, penggunaan SELECT ini bisa dibilang rumit karena memungkinkan kamu untuk melakukan pembuatan berbagai kueri yang sangat fleksibel dengan berbagai ketentuan yang mengikutinya.
 Pernyataan SELECT memiliki beragam ketentuan sebagai berikut:
  Untuk memilih data yang berbeda dengan baris lainnya, kamu bisa menggunakan operator DISTICNT Pengurutan data menggunakan ketentuan ORDER BY Membuat filter baris data menggunakan ketentuan WHERE Memilih sebagian data dari sebuah tabel menggunakan LIMIT atau FETCH Mengelompokkan beberapa baris menjadi kelompok menggunakan GROUP BY Membuat filter kelompok menggunakan HAVING Melakukan join tables menggunakan INNER JOIN, LEFT JOIN, FULL OUTER JOIN, atau CROSS JOIN." />
   <meta name="author" content="Rifqi Abidin" />
@@ -155,16 +155,16 @@ Pernyataan SELECT memiliki beragam ketentuan sebagai berikut:
   
   
   <meta itemprop="name" content="Membuat Kueri SQL">
-<meta itemprop="description" content="Melakukan pengambilan data dari database merupakan salah satu tugas dasar dari berbagai role di bidang data. Pengambilan data menggunakan pernyataan SELECT. Meskipun sekilas terdengar sederhana, penggunaan SELECT ini bisa dibilang rumit karena memungkinkan kita untuk melakukan pembuatan berbagai kueri yang sangat fleksibel dengan berbagai ketentuan yang mengikutinya.
+<meta itemprop="description" content="Melakukan pengambilan data dari database merupakan salah satu tugas dasar dari berbagai role di bidang data. Pengambilan data menggunakan pernyataan SELECT. Meskipun sekilas terdengar sederhana, penggunaan SELECT ini bisa dibilang rumit karena memungkinkan kamu untuk melakukan pembuatan berbagai kueri yang sangat fleksibel dengan berbagai ketentuan yang mengikutinya.
 Pernyataan SELECT memiliki beragam ketentuan sebagai berikut:
  Untuk memilih data yang berbeda dengan baris lainnya, kamu bisa menggunakan operator DISTICNT Pengurutan data menggunakan ketentuan ORDER BY Membuat filter baris data menggunakan ketentuan WHERE Memilih sebagian data dari sebuah tabel menggunakan LIMIT atau FETCH Mengelompokkan beberapa baris menjadi kelompok menggunakan GROUP BY Membuat filter kelompok menggunakan HAVING Melakukan join tables menggunakan INNER JOIN, LEFT JOIN, FULL OUTER JOIN, atau CROSS JOIN."><meta itemprop="datePublished" content="2024-11-07T13:59:21+07:00" />
 <meta itemprop="dateModified" content="2024-11-07T13:59:21+07:00" />
-<meta itemprop="wordCount" content="150">
+<meta itemprop="wordCount" content="1706">
 <meta itemprop="keywords" content="" />
   
   <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Membuat Kueri SQL"/>
-<meta name="twitter:description" content="Melakukan pengambilan data dari database merupakan salah satu tugas dasar dari berbagai role di bidang data. Pengambilan data menggunakan pernyataan SELECT. Meskipun sekilas terdengar sederhana, penggunaan SELECT ini bisa dibilang rumit karena memungkinkan kita untuk melakukan pembuatan berbagai kueri yang sangat fleksibel dengan berbagai ketentuan yang mengikutinya.
+<meta name="twitter:description" content="Melakukan pengambilan data dari database merupakan salah satu tugas dasar dari berbagai role di bidang data. Pengambilan data menggunakan pernyataan SELECT. Meskipun sekilas terdengar sederhana, penggunaan SELECT ini bisa dibilang rumit karena memungkinkan kamu untuk melakukan pembuatan berbagai kueri yang sangat fleksibel dengan berbagai ketentuan yang mengikutinya.
 Pernyataan SELECT memiliki beragam ketentuan sebagai berikut:
  Untuk memilih data yang berbeda dengan baris lainnya, kamu bisa menggunakan operator DISTICNT Pengurutan data menggunakan ketentuan ORDER BY Membuat filter baris data menggunakan ketentuan WHERE Memilih sebagian data dari sebuah tabel menggunakan LIMIT atau FETCH Mengelompokkan beberapa baris menjadi kelompok menggunakan GROUP BY Membuat filter kelompok menggunakan HAVING Melakukan join tables menggunakan INNER JOIN, LEFT JOIN, FULL OUTER JOIN, atau CROSS JOIN."/>
 
@@ -315,7 +315,7 @@ Pernyataan SELECT memiliki beragam ketentuan sebagai berikut:
     
   </header>
 
-  <section><p>Melakukan pengambilan data dari database merupakan salah satu tugas dasar dari berbagai role di bidang data. Pengambilan data menggunakan pernyataan <code>SELECT</code>. Meskipun sekilas terdengar sederhana, penggunaan <code>SELECT</code> ini bisa dibilang rumit karena memungkinkan kita untuk melakukan pembuatan berbagai kueri yang sangat fleksibel dengan berbagai ketentuan yang mengikutinya.</p>
+  <section><p>Melakukan pengambilan data dari database merupakan salah satu tugas dasar dari berbagai role di bidang data. Pengambilan data menggunakan pernyataan <code>SELECT</code>. Meskipun sekilas terdengar sederhana, penggunaan <code>SELECT</code> ini bisa dibilang rumit karena memungkinkan kamu untuk melakukan pembuatan berbagai kueri yang sangat fleksibel dengan berbagai ketentuan yang mengikutinya.</p>
 <p>Pernyataan <code>SELECT</code> memiliki beragam ketentuan sebagai berikut:</p>
 <ul>
 <li>Untuk memilih data yang berbeda dengan baris lainnya, kamu bisa menggunakan operator <code>DISTICNT</code></li>
@@ -327,13 +327,331 @@ Pernyataan SELECT memiliki beragam ketentuan sebagai berikut:
 <li>Melakukan join tables menggunakan <code>INNER JOIN</code>, <code>LEFT JOIN</code>, <code>FULL OUTER JOIN</code>, atau <code>CROSS JOIN</code>.</li>
 <li>Melakukan operasi terhadap suatu set menggunakan <code>UNION</code>, <code>INTERSECT</code>, dan <code>EXCEPT</code></li>
 </ul>
-<h1 id="sintaksis-pernyataan-select">Sintaksis pernyataan SELECT</h1>
+<h2 id="sintaksis-pernyataan-select">Sintaksis pernyataan SELECT</h2>
 <p>Sintaksis paling sederhana dalam penggunaan <code>SELECT</code> adalah untuk mengambil data dari satu tabel. Berikut ilustrasi singkatnya:</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-SQL" data-lang="SQL"><span style="color:#66d9ef">SELECT</span>
     daftar_kolom
 <span style="color:#66d9ef">FROM</span>
     nama_tabel;
-</code></pre></div></section>
+</code></pre></div><p>Pada potongan skrip di atas, kamu bisa memilih sebuah kolom atau beberapa kolom yang dipisahkan dengan tanda koma di antara nama kolom. Jika kamu ingin memilih seluruh kolom, kamu bisa menggunakan tanda bintang untuk menggantikan nama kolom. Selanjutnya kamu bisa menyertakan nama tabel dari database yang memiliki data yang ingin kamu ambil. Sebenarnya penggunaan <code>FROM</code> ini adalah opsional. Kamu bisa juga hanya menggunakan pernyataan <code>SELECT</code> jika kamu tidak ingin mengambil data dari tabel manapun.</p>
+<p>Proses eksekusi kueri pada PostgreSQL akan mengecek pernyataan <code>FROM</code> sebelum mengecek pernyataan <code>SELECT</code>. Perlu diingat bahwa kata kunci pada SQL adalah <em>case-insensitive</em>, artinya <code>SELECT</code>, <code>Select</code>, maupun <code>select</code> memiliki makna yang sama. Namun, untuk kenyamanan bersama, sudah menjadi kesepakatan tak tertulis untuk menggunakan huruf kapital pada kata kunci untuk memudahkan pembacaan kueri.</p>
+<h2 id="contoh-penggunaan-select">Contoh Penggunaan SELECT</h2>
+<p>Pada contoh-contoh selanjutnya, saya akan menggunakan contoh database bernama <code>dvdrental</code> yang bisa kamu unduh di halaman neon. Sesuai namanya, data ini berisikan data transaksi peminjaman DVD, bisnis peminjaman DVD ini laris sebelum berbagai layanan streaming film berlangganan masuk di pasaran.
+tabase <code>dvdrental</code> memiliki daftar tabel sebagai berikut:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-text" data-lang="text">tablename    |
+--------+
+actor        |
+store        |
+address      |
+category     |
+city         |
+country      |
+customer     |
+film_actor   |
+film_category|
+inventory    |
+language     |
+rental       |
+staff        |
+payment      |
+film         |
+</code></pre></div><p>Untuk keperluan tulisan ini, saya akan menggunakan tabel <code>customer</code> yang memiliki daftar kolom sebagai berikut:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-text" data-lang="text">column_name|
+----------+
+customer_id|
+store_id   |
+first_name |
+last_name  |
+email      |
+address_id |
+activebool |
+create_date|
+last_update|
+active     |
+</code></pre></div><h3 id="1-mengambil-data-dari-satu-kolom">1. Mengambil data dari satu kolom</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sql" data-lang="sql"><span style="color:#66d9ef">SELECT</span>
+    first_name
+<span style="color:#66d9ef">FROM</span>
+    customer;
+</code></pre></div><p>Cuplikan hasil:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-text" data-lang="text">first_name|
+----------+
+Jared     |
+Mary      |
+Patricia  |
+Linda     |
+Barbara   |
+Elizabeth |
+Jennifer  |
+...
+</code></pre></div><h3 id="2-mengambil-data-dari-beberapa-kolom">2. Mengambil data dari beberapa kolom</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sql" data-lang="sql"><span style="color:#66d9ef">SELECT</span>
+	customer_id ,
+	first_name ,
+	last_name ,
+	address_id
+<span style="color:#66d9ef">FROM</span>
+	customer;
+</code></pre></div><p>Cuplikan hasil:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-text" data-lang="text">customer_id|first_name|last_name |address_id|
+-----------+----------+----------+----------+
+        524|Jared     |Ely       |       530|
+          1|Mary      |Smith     |         5|
+          2|Patricia  |Johnson   |         6|
+          3|Linda     |Williams  |         7|
+          4|Barbara   |Jones     |         8|
+          5|Elizabeth |Brown     |         9|
+          ...
+</code></pre></div><h3 id="3-mengambil-data-dari-semua-kolom">3. Mengambil data dari semua kolom</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sql" data-lang="sql"><span style="color:#66d9ef">SELECT</span>
+	<span style="color:#f92672">*</span>
+<span style="color:#66d9ef">FROM</span>
+	customer;
+</code></pre></div><p>Cuplikan hasil:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-text" data-lang="text">customer_id|store_id|first_name|last_name |email                                |address_id|activebool|create_date|last_update            |active|
+-----------+--------+----------+----------+-------------------------------------+----------+----------+-----------+-----------------------+------+
+        524|       1|Jared     |Ely       |jared.ely@sakilacustomer.org         |       530|true      | 2006-02-14|2013-05-26 14:49:45.738|     1|
+          1|       1|Mary      |Smith     |mary.smith@sakilacustomer.org        |         5|true      | 2006-02-14|2013-05-26 14:49:45.738|     1|
+          2|       1|Patricia  |Johnson   |patricia.johnson@sakilacustomer.org  |         6|true      | 2006-02-14|2013-05-26 14:49:45.738|     1|
+          3|       1|Linda     |Williams  |linda.williams@sakilacustomer.org    |         7|true      | 2006-02-14|2013-05-26 14:49:45.738|     1|
+          4|       2|Barbara   |Jones     |barbara.jones@sakilacustomer.org     |         8|true      | 2006-02-14|2013-05-26 14:49:45.738|     1|
+          5|       1|Elizabeth |Brown     |elizabeth.brown@sakilacustomer.org   |         9|true      | 2006-02-14|2013-05-26 14:49:45.738|     1|
+          ...
+</code></pre></div><p>Perlu diingat bahwa penggunaan simbol bintang/<em>asterisk</em> pada tergolong yang perlu dihindari khususnya jika skrip kueri kamu disematkan pada kode aplikasi karena:</p>
+<ul>
+<li>Performa database. Kamu bisa saja mengambil lebih banyak data dari yang dibutuhkan.</li>
+<li>Performa aplikasi. Pengambilan data yang sebenarnya tidak diperlukan akan meningkatkan arus baca tulis server sehingga waktu respon aplikasi bisa menurun.</li>
+</ul>
+<h3 id="4-mengambil-data-dengan-ekspresioperator">4. Mengambil data dengan ekspresi/operator</h3>
+<p>Kita akan menggunakan operator concatenate <code>||</code> untuk menggabungkan kolom <code>first_name</code> dan <code>last_name</code>.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sql" data-lang="sql"><span style="color:#66d9ef">SELECT</span>
+	first_name <span style="color:#f92672">||</span> <span style="color:#e6db74">&#39; &#39;</span> <span style="color:#f92672">||</span> last_name,
+    address_id
+<span style="color:#66d9ef">FROM</span>
+	customer;
+</code></pre></div><p>cuplikan hasil:</p>
+<pre tabindex="0"><code>?column?          |address_id|
+------------------+----------+
+Jared Ely         |       530|
+Mary Smith        |         5|
+Patricia Johnson  |         6|
+Linda Williams    |         7|
+Barbara Jones     |         8|
+...
+</code></pre><p>Pada cuplikan hasil kueri kolom pertama memiliki nama <code>?column?</code>. Hal ini dikarenakan kita tidak melakukan penyematan nama alias. Kita dapat memperbaikinya dengan sintaksis sebagai berikut:</p>
+<pre tabindex="0"><code>expressions AS column_alias
+</code></pre><p>Skrip penuhnya bisa dituliskan juga sebagai berikut:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sql" data-lang="sql"><span style="color:#66d9ef">SELECT</span>
+	first_name <span style="color:#f92672">||</span> <span style="color:#e6db74">&#39; &#39;</span> <span style="color:#f92672">||</span> last_name full_name,
+    address_id
+<span style="color:#66d9ef">FROM</span>
+	customer;
+</code></pre></div><p>sehingga cuplikan hasilnya</p>
+<pre tabindex="0"><code>full_name         |address_id|
+------------------+----------+
+Jared Ely         |       530|
+Mary Smith        |         5|
+Patricia Johnson  |         6|
+Linda Williams    |         7|
+Barbara Jones     |         8|
+...
+</code></pre><h3 id="5-mengambil-data-tanpa-menggunakan-from">5. Mengambil data tanpa menggunakan FROM</h3>
+<p>Penggunaan kata kunci <code>FROM</code> pada kueri bersifat opsional. Salah satu contoh kasus penggunaan kueri tanpa <code>FROM</code> adalah penggunaan fungsi <code>NOW()</code>:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-SQL" data-lang="SQL"><span style="color:#66d9ef">SELECT</span> NOW();
+</code></pre></div><p>hasilnya</p>
+<pre tabindex="0"><code>now                          |
+-----------------------------+
+2024-11-07 15:56:39.119 +0700|
+</code></pre><h2 id="penggunaan-alias-pada-kolom">Penggunaan Alias pada kolom</h2>
+<p>Penggunaan alias pada nama kolom memungkinkan kamu untuk menentukan suatu nama sementara untuk suatu kolom atau eskpresi dari daftar yang dipilih. Berikut sintaksis penggunaan alias pada kolom:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sql" data-lang="sql"><span style="color:#66d9ef">SELECT</span> nama_kolom <span style="color:#66d9ef">AS</span> nama_alias
+<span style="color:#66d9ef">FROM</span> nama_tabel
+</code></pre></div><p>Pada contoh tersebut nama_alias ditujukan untuk mengganti nama_kolom. Perlu diperhatikan juga bahwa kata kunci <code>AS</code> bersifat opsional sehingga kamu bisa menuliskannya sebagai berikut:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sql" data-lang="sql"><span style="color:#66d9ef">SELECT</span> nama_kolom nama_alias
+<span style="color:#66d9ef">FROM</span> nama_tabel
+</code></pre></div><p>Secara singkat, pembahasan tentang alias pada nama kolom juga sudah dibahas pada di atas pada bagian Contoh penggunaan SELECT di poin 4. Mengambil data dengan ekspresi/operator.</p>
+<h2 id="mengurutkan-data-dengan-order-by">Mengurutkan data dengan ORDER BY</h2>
+<p>Ketika kita membuat kueri, penggunaan <code>SELECT</code> akan memberikan hasil yang tidak terurut. Untuk mendapatkan data yang sudah berurutan, kamu dapat menggunakan <code>ORDER BY</code> pada kueri. Berikut sintaksis penggunaan <code>ORDER BY</code>:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sql" data-lang="sql"><span style="color:#66d9ef">SELECT</span>
+    select_list
+<span style="color:#66d9ef">FROM</span>
+    <span style="color:#66d9ef">table_name</span>
+<span style="color:#66d9ef">ORDER</span> <span style="color:#66d9ef">BY</span>
+    expression1 [<span style="color:#66d9ef">ASC</span> <span style="color:#f92672">|</span> <span style="color:#66d9ef">DESC</span>],
+    expression2 [<span style="color:#66d9ef">ASC</span> <span style="color:#f92672">|</span> <span style="color:#66d9ef">DESC</span>],
+    expression3 [<span style="color:#66d9ef">ASC</span> <span style="color:#f92672">|</span> <span style="color:#66d9ef">DESC</span>],
+    ...;
+</code></pre></div><p>Pada contoh kueri tersebut, kamu bisa menempatkan kolom atau ekspresi yang akan digunakan sebagai dasar pengurutan oleh kata kunci <code>ORDER BY</code>. Jika kamu ingin mengurutkan hasil kueri berdasarkan beberapa kolom sekaligus, kamu harus memisahkannya dengan tanda koma (<code>,</code>) di antara nama kolom atau ekspresi. Pengurutan dapat dilakukan secara menaik, dari nilai terendah ke nilai tertinggi, maupun sebaliknya, menurun. Secara bawaan kueri akan menggunakan opsi menaik (<em>ascending</em>).</p>
+<p>PostgreSQL akan melakukan pengurutan setelah melakukan pengecekan terhadap <code>SELECT</code>. Secara berurutan, pengecekan yang akan dilakukan oleh postgreSQL adalah: <code>FROM</code>, <code>SELECT</code>, dan <code>ORDER BY</code>. Kamu bisa juga menggunakan nama alias untuk mengurutkan data.</p>
+<h3 id="1-mengurutkan-data-berdasarkan-satu-kolom">1. Mengurutkan data berdasarkan satu kolom</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-SQL" data-lang="SQL"><span style="color:#66d9ef">SELECT</span>
+	first_name,
+	last_name 
+<span style="color:#66d9ef">FROM</span>
+	customer
+<span style="color:#66d9ef">ORDER</span> <span style="color:#66d9ef">BY</span>
+	first_name;
+</code></pre></div><p>Ingat bahwa secara bawaan, pengurutan dilakukan secara menaik (<code>ASC</code>) sehingga tidak perlu ditulis.</p>
+<p>Cuplikan hasil kueri:</p>
+<pre tabindex="0"><code>first_name |last_name  |
+-----------+-----------+
+Aaron      |Selby      |
+Adam       |Gooch      |
+Adrian     |Clary      |
+Agnes      |Bishop     |
+Alan       |Kahn       |
+Albert     |Crouse     |
+Alberto    |Henning    |
+Alex       |Gresham    |
+</code></pre><h3 id="2-mengurutkan-data-berdasarkan-beberapa-kolom">2. Mengurutkan data berdasarkan beberapa kolom</h3>
+<p>Pengurutan data dapat dilakukan dengan lebih dari satu kolom sekaligus. Berikut kueri untuk mengambil data <code>first_name</code> dan <code>last_name</code> dengan pengurutan <code>first_name</code> secara menurun dan diikuti dengan <code>last_name</code> secara menurun juga.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sql" data-lang="sql"><span style="color:#66d9ef">SELECT</span>
+	first_name,
+	last_name
+<span style="color:#66d9ef">FROM</span>
+	customer
+<span style="color:#66d9ef">ORDER</span> <span style="color:#66d9ef">BY</span>
+	first_name <span style="color:#66d9ef">DESC</span>,
+	last_name <span style="color:#66d9ef">DESC</span>;
+</code></pre></div><p>cuplikan hasil kueri:</p>
+<pre tabindex="0"><code>first_name|last_name   |
+----------+------------+
+Zachary   |Hite        |
+Yvonne    |Watkins     |
+Yolanda   |Weaver      |
+Wilma     |Richards    |
+Willie    |Markham     |
+Willie    |Howell      |
+William   |Satterfield |
+Willard   |Lumpkin     |
+</code></pre><p>Terlihat pada nama depan <strong>Willie</strong>, dilakukan pengurutan menurun pada nama belakang sehingga <strong>Markham</strong> berada lebih dulu sebelum <strong>Howell</strong>.</p>
+<h3 id="3-mengurutkan-data-berdasarkan-expression">3. Mengurutkan data berdasarkan expression</h3>
+<p>Selain menggunakan kolom, pengurutan juga dapat menggunakan <em>expressions</em> sebagai acuannya. Berikut contoh pengurutan data dengan menggunakan fungsi <code>LENGTH()</code> yang akan memberikan nilai panjang dari suatu string.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sql" data-lang="sql"><span style="color:#66d9ef">SELECT</span>
+	last_name ,
+	<span style="color:#66d9ef">LENGTH</span>(last_name) len
+<span style="color:#66d9ef">FROM</span>
+	customer
+<span style="color:#66d9ef">ORDER</span> <span style="color:#66d9ef">BY</span>
+	len <span style="color:#66d9ef">DESC</span> ;
+</code></pre></div><p>Pada skrip tersebut saya mengambil kolom <code>last_name</code> dan menggunakan fungsi <code>LENGTH()</code> dengan kolom <code>last_name</code> sebagai input serta alias <code>len</code> pada ekspresi tersebut. Pengurutan data dilakukan secara menurun terhadap ekspresi <code>len</code>.
+Cuplikan hasil kueri:</p>
+<pre tabindex="0"><code>last_name   |len|
+------------+---+
+Westmoreland| 12|
+Christenson | 11|
+Satterfield | 11|
+Butterfield | 11|
+Quintanilla | 11|
+Scarborough | 11|
+Billingsley | 11|
+</code></pre><h3 id="4-mengurutkan-data-null">4. Mengurutkan data NULL</h3>
+<p>Ada kondisi saat data yang kita miliki memiliki nilai <code>NULL</code>. Kondisi tersebut bisa jadi ada data yang hilang. Ketika mengurutkan kolom yang memiliki nilai <code>NULL</code>, kamu bisa mengurutkan nilai <code>NULL</code> secara khusus dengan menggunakan <code>NULLS FIRST</code> atau <code>NULLS LAST</code>. Pengurutan secara bawaan menggunakan <code>NULLS LAST</code>.</p>
+<p>Sebagai contoh, saya akan menggunakan urutan data berikut:</p>
+<pre tabindex="0"><code>num   |
+------+
+     1|
+     1|
+     2|
+     3|
+     5|
+[NULL]|
+     8|
+[NULL]|
+</code></pre><p>Saya akan mengurutkan data dengan menaruh nilai <code>NULL</code> di awal dengan kueri:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sql" data-lang="sql"><span style="color:#66d9ef">SELECT</span>
+	num
+<span style="color:#66d9ef">FROM</span>
+	order_null_demo 
+<span style="color:#66d9ef">ORDER</span> <span style="color:#66d9ef">BY</span> num NULLS <span style="color:#66d9ef">FIRST</span> ;
+</code></pre></div><p>Berikut hasil kueri tersebut:</p>
+<pre tabindex="0"><code>num   |
+------+
+[NULL]|
+[NULL]|
+     1|
+     1|
+     2|
+     3|
+     5|
+     8|
+</code></pre><h2 id="penggunaan-select-distinct">Penggunaan SELECT DISTINCT</h2>
+<p>Ada saatnya data kita masih memiliki baris yang duplikat entah karena kesalahan aplikasi, data pipeline atau lainnya. Penggunaan <code>SELECT DISTINCT</code> bisa dimanfaatkan untuk menghilangkan duplikasi pada hasil kueri. Pernyataan tersebut akan menampilkan satu baris data untuk setiap kelompok hasil baris yang duplikat. Berikut merupakan sintaksis dari penggunaan <code>SELECT DISTINCT</code>:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sql" data-lang="sql"><span style="color:#66d9ef">SELECT</span>
+    <span style="color:#66d9ef">DISTINCT</span> kolom1
+<span style="color:#66d9ef">FROM</span>
+    nama_tabel;
+</code></pre></div><p>Pernyataan <code>SELECT DISTINCT</code> juga bisa digunakan pada lebih dari satu kolom.</p>
+<p>Pada PostgreSQL, terdapat juga pernyataan <code>DISTINCT ON</code> yang akan memberikan hasil baris yang tidak duplikat berdasarkan entri pertama dari satu atau lebih kolom pada hasil kueri.</p>
+<p>Agar lebih jelas, saya akan menggunakan tabel <code>jadwal_belajar</code> berikut sebagai ilustrasi:</p>
+<pre tabindex="0"><code>id|hari  |materi   |
+--+------+---------+
+ 1|[NULL]|python   |
+ 2|Senin |SQL      |
+ 3|Selasa|Python   |
+ 4|Rabu  |SQL      |
+ 5|Rabu  |SQL      |
+ 6|Kamis |Statistik|
+ 7|Kamis |Airflow  |
+ 8|Jumat |[NULL]   |
+ 9|[NULL]|[NULL]   |
+10|[NULL]|[NULL]   |
+</code></pre><h3 id="1-penggunaan-select-distinct-pada-satu-kolom">1. Penggunaan SELECT DISTINCT pada satu kolom</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sql" data-lang="sql"><span style="color:#66d9ef">SELECT</span>
+	<span style="color:#66d9ef">DISTINCT</span> materi
+<span style="color:#66d9ef">FROM</span>
+	jadwal_belajar;
+</code></pre></div><p>keluaran dari kueri di atas:</p>
+<pre tabindex="0"><code>materi   |
+---------+
+[NULL]   |
+python   |
+Airflow  |
+Python   |
+SQL      |
+Statistik|
+</code></pre><p>perhatikan bahwa terdapat dua buah materi <code>python</code> dan <code>Python</code>, karena <code>SELECT DISTINCT</code> tidak <em>case-sensitive</em>.</p>
+<h3 id="2-penggunaan-select-distinct-pada-beberapa-kolom">2. Penggunaan SELECT DISTINCT pada beberapa kolom</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sql" data-lang="sql"><span style="color:#66d9ef">SELECT</span>
+	<span style="color:#66d9ef">DISTINCT</span> hari,
+	materi
+<span style="color:#66d9ef">FROM</span>
+	jadwal_belajar
+<span style="color:#66d9ef">ORDER</span> <span style="color:#66d9ef">BY</span>
+	hari,
+	materi;
+</code></pre></div><p>keluaran dari kueri di atas:</p>
+<pre tabindex="0"><code>hari  |materi   |
+------+---------+
+Jumat |[NULL]   |
+Kamis |Airflow  |
+Kamis |Statistik|
+Rabu  |SQL      |
+Selasa|Python   |
+Senin |SQL      |
+[NULL]|python   |
+[NULL]|[NULL]   |
+</code></pre><p>Dengan menggunakan <code>SELECT DISTINCT</code> pada beberapa kolom, kita bisa mendapatkan data tanpa duplikasi dengan tingkat detail yang dibutuhkan.</p>
+<h3 id="3-penggunaan-select-distinct-on">3. Penggunaan SELECT DISTINCT ON</h3>
+<p>PostgreSQL memiliki pernyataan <code>SELECT DISTINCT ON ( expression [, ...] )</code> yang akan menyimpan baris pertama dari setiap set yang duplikat. berikut contoh kueri:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sql" data-lang="sql"><span style="color:#66d9ef">SELECT</span>
+	<span style="color:#66d9ef">DISTINCT</span> <span style="color:#66d9ef">ON</span>
+	(materi) hari,
+	materi
+<span style="color:#66d9ef">FROM</span>
+	jadwal_belajar;
+</code></pre></div><p>Hasil dari kueri tersebut:</p>
+<pre tabindex="0"><code>hari  |materi   |
+------+---------+
+Kamis |Airflow  |
+Selasa|Python   |
+Senin |SQL      |
+Kamis |Statistik|
+[NULL]|python   |
+Jumat |[NULL]   |
+</code></pre><p>Kueri tersebut memberikan hasil tanpa baris duplikat di kolom <code>materi</code> saja sedangkan kolom <code>hari</code> masih memberikan hasil duplikat karena kueri hanya melakukan pemilihan tanpa duplikat di kolom <code>materi</code>.</p>
+<p>Setelah kita mempelajari pembuatan kueri, pada pos selanjutnya saya akan membahas tentang melakukan <em>filtering</em> data pada kueri.</p>
+</section>
 
   
   

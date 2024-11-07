@@ -13,7 +13,7 @@
       <pubDate>Thu, 07 Nov 2024 13:59:21 +0700</pubDate>
       
       <guid>https://rifqiabidin.github.io/post/membuat-kueri-sql/</guid>
-      <description>Melakukan pengambilan data dari database merupakan salah satu tugas dasar dari berbagai role di bidang data. Pengambilan data menggunakan pernyataan SELECT. Meskipun sekilas terdengar sederhana, penggunaan SELECT ini bisa dibilang rumit karena memungkinkan kita untuk melakukan pembuatan berbagai kueri yang sangat fleksibel dengan berbagai ketentuan yang mengikutinya.
+      <description>Melakukan pengambilan data dari database merupakan salah satu tugas dasar dari berbagai role di bidang data. Pengambilan data menggunakan pernyataan SELECT. Meskipun sekilas terdengar sederhana, penggunaan SELECT ini bisa dibilang rumit karena memungkinkan kamu untuk melakukan pembuatan berbagai kueri yang sangat fleksibel dengan berbagai ketentuan yang mengikutinya.
 Pernyataan SELECT memiliki beragam ketentuan sebagai berikut:
  Untuk memilih data yang berbeda dengan baris lainnya, kamu bisa menggunakan operator DISTICNT Pengurutan data menggunakan ketentuan ORDER BY Membuat filter baris data menggunakan ketentuan WHERE Memilih sebagian data dari sebuah tabel menggunakan LIMIT atau FETCH Mengelompokkan beberapa baris menjadi kelompok menggunakan GROUP BY Membuat filter kelompok menggunakan HAVING Melakukan join tables menggunakan INNER JOIN, LEFT JOIN, FULL OUTER JOIN, atau CROSS JOIN.</description>
     </item>
