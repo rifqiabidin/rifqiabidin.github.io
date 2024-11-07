@@ -49,7 +49,7 @@
   />
 
   
-  <title>Posts - Records</title>
+  <title>Membuat Kueri SQL - Records</title>
 
   
   <meta name="theme-color" />
@@ -57,11 +57,9 @@
   
   
   
-  
-  <meta
-    name="description"
-    content="A personal blog"
-  />
+  <meta name="description" content="Melakukan pengambilan data dari database merupakan salah satu tugas dasar dari berbagai role di bidang data. Pengambilan data menggunakan pernyataan SELECT. Meskipun sekilas terdengar sederhana, penggunaan SELECT ini bisa dibilang rumit karena memungkinkan kita untuk melakukan pembuatan berbagai kueri yang sangat fleksibel dengan berbagai ketentuan yang mengikutinya.
+Pernyataan SELECT memiliki beragam ketentuan sebagai berikut:
+ Untuk memilih data yang berbeda dengan baris lainnya, kamu bisa menggunakan operator DISTICNT Pengurutan data menggunakan ketentuan ORDER BY Membuat filter baris data menggunakan ketentuan WHERE Memilih sebagian data dari sebuah tabel menggunakan LIMIT atau FETCH Mengelompokkan beberapa baris menjadi kelompok menggunakan GROUP BY Membuat filter kelompok menggunakan HAVING Melakukan join tables menggunakan INNER JOIN, LEFT JOIN, FULL OUTER JOIN, atau CROSS JOIN." />
   <meta name="author" content="Rifqi Abidin" />
   
 
@@ -73,6 +71,12 @@
   
   <link rel="preload stylesheet" as="style" href="https://rifqiabidin.github.io/main.min.css" />
 
+  
+  <script
+    defer
+    src="https://rifqiabidin.github.io/highlight.min.js"
+    onload="hljs.initHighlightingOnLoad();"
+  ></script>
   
 
   
@@ -144,25 +148,25 @@
 
   
   
-  <link
-    rel="alternate"
-    type="application/rss&#43;xml"
-    href="https://rifqiabidin.github.io/post/index.xml"
-    title="Records"
-  />
-  
 
   
   
   
   
   
-  <meta itemprop="name" content="Posts">
-<meta itemprop="description" content="">
+  <meta itemprop="name" content="Membuat Kueri SQL">
+<meta itemprop="description" content="Melakukan pengambilan data dari database merupakan salah satu tugas dasar dari berbagai role di bidang data. Pengambilan data menggunakan pernyataan SELECT. Meskipun sekilas terdengar sederhana, penggunaan SELECT ini bisa dibilang rumit karena memungkinkan kita untuk melakukan pembuatan berbagai kueri yang sangat fleksibel dengan berbagai ketentuan yang mengikutinya.
+Pernyataan SELECT memiliki beragam ketentuan sebagai berikut:
+ Untuk memilih data yang berbeda dengan baris lainnya, kamu bisa menggunakan operator DISTICNT Pengurutan data menggunakan ketentuan ORDER BY Membuat filter baris data menggunakan ketentuan WHERE Memilih sebagian data dari sebuah tabel menggunakan LIMIT atau FETCH Mengelompokkan beberapa baris menjadi kelompok menggunakan GROUP BY Membuat filter kelompok menggunakan HAVING Melakukan join tables menggunakan INNER JOIN, LEFT JOIN, FULL OUTER JOIN, atau CROSS JOIN."><meta itemprop="datePublished" content="2024-11-07T13:59:21+07:00" />
+<meta itemprop="dateModified" content="2024-11-07T13:59:21+07:00" />
+<meta itemprop="wordCount" content="150">
+<meta itemprop="keywords" content="" />
   
   <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Posts"/>
-<meta name="twitter:description" content=""/>
+<meta name="twitter:title" content="Membuat Kueri SQL"/>
+<meta name="twitter:description" content="Melakukan pengambilan data dari database merupakan salah satu tugas dasar dari berbagai role di bidang data. Pengambilan data menggunakan pernyataan SELECT. Meskipun sekilas terdengar sederhana, penggunaan SELECT ini bisa dibilang rumit karena memungkinkan kita untuk melakukan pembuatan berbagai kueri yang sangat fleksibel dengan berbagai ketentuan yang mengikutinya.
+Pernyataan SELECT memiliki beragam ketentuan sebagai berikut:
+ Untuk memilih data yang berbeda dengan baris lainnya, kamu bisa menggunakan operator DISTICNT Pengurutan data menggunakan ketentuan ORDER BY Membuat filter baris data menggunakan ketentuan WHERE Memilih sebagian data dari sebuah tabel menggunakan LIMIT atau FETCH Mengelompokkan beberapa baris menjadi kelompok menggunakan GROUP BY Membuat filter kelompok menggunakan HAVING Melakukan join tables menggunakan INNER JOIN, LEFT JOIN, FULL OUTER JOIN, atau CROSS JOIN."/>
 
   
   
@@ -295,57 +299,71 @@
     >
       
 
+<article>
+  <header class="mb-16">
+    <h1 class="!my-0 pb-2.5">Membuat Kueri SQL</h1>
 
+    
+    <div class="text-sm antialiased opacity-60">
+      
+      <time>Nov 7, 2024</time>
+      
+      
+      
+      
+    </div>
+    
+  </header>
 
+  <section><p>Melakukan pengambilan data dari database merupakan salah satu tugas dasar dari berbagai role di bidang data. Pengambilan data menggunakan pernyataan <code>SELECT</code>. Meskipun sekilas terdengar sederhana, penggunaan <code>SELECT</code> ini bisa dibilang rumit karena memungkinkan kita untuk melakukan pembuatan berbagai kueri yang sangat fleksibel dengan berbagai ketentuan yang mengikutinya.</p>
+<p>Pernyataan <code>SELECT</code> memiliki beragam ketentuan sebagai berikut:</p>
+<ul>
+<li>Untuk memilih data yang berbeda dengan baris lainnya, kamu bisa menggunakan operator <code>DISTICNT</code></li>
+<li>Pengurutan data menggunakan ketentuan <code>ORDER BY</code></li>
+<li>Membuat filter baris data menggunakan ketentuan <code>WHERE</code></li>
+<li>Memilih sebagian data dari sebuah tabel menggunakan <code>LIMIT</code> atau <code>FETCH</code></li>
+<li>Mengelompokkan beberapa baris menjadi kelompok menggunakan <code>GROUP BY</code></li>
+<li>Membuat filter kelompok menggunakan <code>HAVING</code></li>
+<li>Melakukan join tables menggunakan <code>INNER JOIN</code>, <code>LEFT JOIN</code>, <code>FULL OUTER JOIN</code>, atau <code>CROSS JOIN</code>.</li>
+<li>Melakukan operasi terhadap suatu set menggunakan <code>UNION</code>, <code>INTERSECT</code>, dan <code>EXCEPT</code></li>
+</ul>
+<h1 id="sintaksis-pernyataan-select">Sintaksis pernyataan SELECT</h1>
+<p>Sintaksis paling sederhana dalam penggunaan <code>SELECT</code> adalah untuk mengambil data dari satu tabel. Berikut ilustrasi singkatnya:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-SQL" data-lang="SQL"><span style="color:#66d9ef">SELECT</span>
+    daftar_kolom
+<span style="color:#66d9ef">FROM</span>
+    nama_tabel;
+</code></pre></div></section>
 
-
-
-
-
-
- 
-
-
-
-
-<section class="relative my-10 first-of-type:mt-0 last-of-type:mb-0">
   
-  <h2 class="!my-0 pb-1 font-bold !leading-none">Membuat Kueri SQL</h2>
-  <time class="text-sm antialiased opacity-60"
-    >Nov 7, 2024</time
-  >
-  <a class="absolute inset-0 text-[0]" href="https://rifqiabidin.github.io/post/membuat-kueri-sql/">Membuat Kueri SQL</a>
-</section>
-
-
-
-
-
-<section class="relative my-10 first-of-type:mt-0 last-of-type:mb-0">
   
-  <h2 class="!my-0 pb-1 font-bold !leading-none">Belajar SQL</h2>
-  <time class="text-sm antialiased opacity-60"
-    >Nov 6, 2024</time
-  >
-  <a class="absolute inset-0 text-[0]" href="https://rifqiabidin.github.io/post/learn-sql/">Belajar SQL</a>
-</section>
 
-
-
-
-
-<section class="relative my-10 first-of-type:mt-0 last-of-type:mb-0">
   
-  <h2 class="!my-0 pb-1 font-bold !leading-none">Data Mastery Roadmap</h2>
-  <time class="text-sm antialiased opacity-60"
-    >Nov 5, 2024</time
-  >
-  <a class="absolute inset-0 text-[0]" href="https://rifqiabidin.github.io/post/data-mastery-roadmap/">Data Mastery Roadmap</a>
-</section>
+  
+  
+  
+  <nav class="mt-24 flex rounded-lg bg-black/[3%] text-lg dark:bg-white/[8%]">
+    
+    
+    <a
+      class="ml-auto flex w-1/2 items-center justify-end rounded-r-md p-6 pl-3 font-semibold no-underline hover:bg-black/[2%] dark:hover:bg-white/[3%]"
+      href="https://rifqiabidin.github.io/post/learn-sql/"
+      ><span>Belajar SQL</span><span class="ml-1.5">→</span></a
+    >
+    
+  </nav>
+  
+  
 
+  
+  
 
+  
+  
 
-
+  
+  
+</article>
 
 
     </main>
