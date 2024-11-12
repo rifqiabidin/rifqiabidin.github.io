@@ -2,13 +2,16 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://rifqiabidin.github.io/post/filtering-data-sql/</loc>
-    <lastmod>2024-11-08T09:09:03+07:00</lastmod>
+    <loc>https://rifqiabidin.github.io/post/join-sql/</loc>
+    <lastmod>2024-11-10T10:53:42+07:00</lastmod>
   </url><url>
     <loc>https://rifqiabidin.github.io/post/</loc>
-    <lastmod>2024-11-08T09:09:03+07:00</lastmod>
+    <lastmod>2024-11-10T10:53:42+07:00</lastmod>
   </url><url>
     <loc>https://rifqiabidin.github.io/</loc>
+    <lastmod>2024-11-10T10:53:42+07:00</lastmod>
+  </url><url>
+    <loc>https://rifqiabidin.github.io/post/filtering-data-sql/</loc>
     <lastmod>2024-11-08T09:09:03+07:00</lastmod>
   </url><url>
     <loc>https://rifqiabidin.github.io/post/membuat-kueri-sql/</loc>

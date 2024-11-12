@@ -6,9 +6,19 @@
     <description>Recent content in Posts on Records</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>id-id</language>
-    <lastBuildDate>Fri, 08 Nov 2024 09:09:03 +0700</lastBuildDate><atom:link href="https://rifqiabidin.github.io/post/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 10 Nov 2024 10:53:42 +0700</lastBuildDate><atom:link href="https://rifqiabidin.github.io/post/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Filtering Data Sql</title>
+      <title>Join Sql</title>
+      <link>https://rifqiabidin.github.io/post/join-sql/</link>
+      <pubDate>Sun, 10 Nov 2024 10:53:42 +0700</pubDate>
+      
+      <guid>https://rifqiabidin.github.io/post/join-sql/</guid>
+      <description>Dalam praktik di dunia nyata, data yang dibutuhkan seringkali berasal dari berbagai tabel sumber. Pada tulisan ini, saya akan membahas tentang JOIN yang merupakan cara untuk menggabungkan satu atau lebih tabel dengan kesamaan kolom. PostgreSQL mendukung kita untuk melakukan beberapa operasi seperti INNER JOIN, LEFT JOIN, RIGHT JOIN, FULL OUTER JOIN, CROSS JOIN, NATURAL JOIN, dan jenis khusus yang disebut SELF-JOIN.
+INNER JOIN Operasi INNER JOIN akan memberikan hasil berupa baris yang memiliki kesamaan nilai pada kolom di setiap tabelnya.</description>
+    </item>
+    
+    <item>
+      <title>Filtering Data SQL</title>
       <link>https://rifqiabidin.github.io/post/filtering-data-sql/</link>
       <pubDate>Fri, 08 Nov 2024 09:09:03 +0700</pubDate>
       

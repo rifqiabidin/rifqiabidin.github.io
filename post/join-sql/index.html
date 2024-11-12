@@ -1,0 +1,575 @@
+<!doctype html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<html
+  class="not-ready lg:text-base"
+  style="--bg: #faf8f1"
+  lang="id-id"
+>
+  <head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1, shrink-to-fit=no"
+  />
+
+  
+  <title>Join Sql - Records</title>
+
+  
+  <meta name="theme-color" />
+
+  
+  
+  
+  <meta name="description" content="Dalam praktik di dunia nyata, data yang dibutuhkan seringkali berasal dari berbagai tabel sumber. Pada tulisan ini, saya akan membahas tentang JOIN yang merupakan cara untuk menggabungkan satu atau lebih tabel dengan kesamaan kolom. PostgreSQL mendukung kita untuk melakukan beberapa operasi seperti INNER JOIN, LEFT JOIN, RIGHT JOIN, FULL OUTER JOIN, CROSS JOIN, NATURAL JOIN, dan jenis khusus yang disebut SELF-JOIN.
+INNER JOIN Operasi INNER JOIN akan memberikan hasil berupa baris yang memiliki kesamaan nilai pada kolom di setiap tabelnya." />
+  <meta name="author" content="Rifqi Abidin" />
+  
+
+  
+  
+  
+  
+  
+  
+  <link rel="preload stylesheet" as="style" href="https://rifqiabidin.github.io/main.min.css" />
+
+  
+  <script
+    defer
+    src="https://rifqiabidin.github.io/highlight.min.js"
+    onload="hljs.initHighlightingOnLoad();"
+  ></script>
+  
+
+  
+   
+  <link rel="preload" as="image" href="https://rifqiabidin.github.io/theme.png" />
+
+  
+  
+  
+  
+
+  
+  <link rel="preload" as="image" href="https://rifqiabidin.github.io/twitter.svg" />
+  
+  <link rel="preload" as="image" href="https://rifqiabidin.github.io/github.svg" />
+  
+  <link rel="preload" as="image" href="https://rifqiabidin.github.io/linkedin.svg" />
+  
+  <link rel="preload" as="image" href="https://rifqiabidin.github.io/rss.svg" />
+  
+  
+
+  
+  
+  <link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/katex@0.16.7/dist/katex.min.css"
+  integrity="sha384-3UiQGuEI4TTMaFmGIZumfRPtfKQ3trwQE2JgosJxCnGmQpL/lJdjpcHkaaFwHlcI"
+  crossorigin="anonymous"
+/>
+<script
+  defer
+  src="https://cdn.jsdelivr.net/npm/katex@0.16.7/dist/katex.min.js"
+  integrity="sha384-G0zcxDFp5LWZtDuRMnBkk3EphCK1lhEf4UEyEM693ka574TZGwo4IWwS6QLzM/2t"
+  crossorigin="anonymous"
+></script>
+<script
+  defer
+  src="https://cdn.jsdelivr.net/npm/katex@0.16.7/dist/contrib/auto-render.min.js"
+  integrity="sha384-+VBxd3r6XgURycqtZ117nYw44OOcIax56Z4dCRWbxyPt0Koah1uHoK0o4+/RRE05"
+  crossorigin="anonymous"
+></script>
+
+<script>
+    document.addEventListener("DOMContentLoaded", () =>
+        renderMathInElement(document.body, {
+          
+          
+          delimiters: [
+              {left: '$$', right: '$$', display: true},
+              {left: '$', right: '$', display: false},
+          ],
+          
+          throwOnError : false
+        })
+    );
+</script>
+
+  
+  
+  
+
+  
+  <link rel="icon" href="https://rifqiabidin.github.io/favicon.ico" />
+  <link rel="apple-touch-icon" href="https://rifqiabidin.github.io/apple-touch-icon.png" />
+
+  
+  <meta name="generator" content="Hugo 0.92.2" />
+
+  
+  
+
+  
+  
+  
+  
+  
+  <meta itemprop="name" content="Join Sql">
+<meta itemprop="description" content="Dalam praktik di dunia nyata, data yang dibutuhkan seringkali berasal dari berbagai tabel sumber. Pada tulisan ini, saya akan membahas tentang JOIN yang merupakan cara untuk menggabungkan satu atau lebih tabel dengan kesamaan kolom. PostgreSQL mendukung kita untuk melakukan beberapa operasi seperti INNER JOIN, LEFT JOIN, RIGHT JOIN, FULL OUTER JOIN, CROSS JOIN, NATURAL JOIN, dan jenis khusus yang disebut SELF-JOIN.
+INNER JOIN Operasi INNER JOIN akan memberikan hasil berupa baris yang memiliki kesamaan nilai pada kolom di setiap tabelnya."><meta itemprop="datePublished" content="2024-11-10T10:53:42+07:00" />
+<meta itemprop="dateModified" content="2024-11-10T10:53:42+07:00" />
+<meta itemprop="wordCount" content="1175">
+<meta itemprop="keywords" content="" />
+  
+  <meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Join Sql"/>
+<meta name="twitter:description" content="Dalam praktik di dunia nyata, data yang dibutuhkan seringkali berasal dari berbagai tabel sumber. Pada tulisan ini, saya akan membahas tentang JOIN yang merupakan cara untuk menggabungkan satu atau lebih tabel dengan kesamaan kolom. PostgreSQL mendukung kita untuk melakukan beberapa operasi seperti INNER JOIN, LEFT JOIN, RIGHT JOIN, FULL OUTER JOIN, CROSS JOIN, NATURAL JOIN, dan jenis khusus yang disebut SELF-JOIN.
+INNER JOIN Operasi INNER JOIN akan memberikan hasil berupa baris yang memiliki kesamaan nilai pada kolom di setiap tabelnya."/>
+
+  
+  
+</head>
+
+  <body class="text-black duration-200 ease-out dark:text-white">
+    <header class="mx-auto flex h-[4.5rem] max-w-3xl px-8 lg:justify-center">
+  <div class="relative z-50 mr-auto flex items-center">
+    <a
+      class="-translate-x-[1px] -translate-y-[1px] text-2xl font-semibold"
+      href="https://rifqiabidin.github.io/"
+      >Records</a
+    >
+    <div
+      class="btn-dark text-[0] ml-4 h-6 w-6 shrink-0 cursor-pointer [background:url(./theme.png)_left_center/_auto_theme('spacing.6')_no-repeat] [transition:_background-position_0.4s_steps(5)] dark:[background-position:right]"
+      role="button"
+      aria-label="Dark"
+    ></div>
+  </div>
+
+  <div
+    class="btn-menu relative z-50 -mr-8 flex h-[4.5rem] w-[5rem] shrink-0 cursor-pointer flex-col items-center justify-center gap-2.5 lg:hidden"
+    role="button"
+    aria-label="Menu"
+  ></div>
+
+  
+  <script>
+    
+    const htmlClass = document.documentElement.classList;
+    setTimeout(() => {
+      htmlClass.remove('not-ready');
+    }, 10);
+
+    
+    const btnMenu = document.querySelector('.btn-menu');
+    btnMenu.addEventListener('click', () => {
+      htmlClass.toggle('open');
+    });
+
+    
+    const metaTheme = document.querySelector('meta[name="theme-color"]');
+    const lightBg = '#faf8f1'.replace(/"/g, '');
+    const setDark = (isDark) => {
+      metaTheme.setAttribute('content', isDark ? '#000' : lightBg);
+      htmlClass[isDark ? 'add' : 'remove']('dark');
+      localStorage.setItem('dark', isDark);
+    };
+
+    
+    const darkScheme = window.matchMedia('(prefers-color-scheme: dark)');
+    if (htmlClass.contains('dark')) {
+      setDark(true);
+    } else {
+      const darkVal = localStorage.getItem('dark');
+      setDark(darkVal ? darkVal === 'true' : darkScheme.matches);
+    }
+
+    
+    darkScheme.addEventListener('change', (event) => {
+      setDark(event.matches);
+    });
+
+    
+    const btnDark = document.querySelector('.btn-dark');
+    btnDark.addEventListener('click', () => {
+      setDark(localStorage.getItem('dark') !== 'true');
+    });
+  </script>
+
+  <div
+    class="nav-wrapper fixed inset-x-0 top-full z-40 flex h-full select-none flex-col justify-center pb-16 duration-200 dark:bg-black lg:static lg:h-auto lg:flex-row lg:!bg-transparent lg:pb-0 lg:transition-none"
+  >
+    
+    
+
+    
+    <nav
+      class="mt-12 flex justify-center space-x-10 dark:invert lg:ml-12 lg:mt-0 lg:items-center lg:space-x-6"
+    >
+      
+      <a
+        class="h-8 w-8 text-[0] [background:var(--url)_center_center/cover_no-repeat] lg:h-6 lg:w-6"
+        style="--url: url(./twitter.svg)"
+        href="https://twitter.com/rifqiabidin"
+        target="_blank"
+        rel="me"
+      >
+        twitter
+      </a>
+      
+      <a
+        class="h-8 w-8 text-[0] [background:var(--url)_center_center/cover_no-repeat] lg:h-6 lg:w-6"
+        style="--url: url(./github.svg)"
+        href="https://github.com/rifqiabidin"
+        target="_blank"
+        rel="me"
+      >
+        github
+      </a>
+      
+      <a
+        class="h-8 w-8 text-[0] [background:var(--url)_center_center/cover_no-repeat] lg:h-6 lg:w-6"
+        style="--url: url(./linkedin.svg)"
+        href="https://linkedin.com/in/rifqiabidin"
+        target="_blank"
+        rel="me"
+      >
+        linkedin
+      </a>
+      
+      <a
+        class="h-8 w-8 text-[0] [background:var(--url)_center_center/cover_no-repeat] lg:h-6 lg:w-6"
+        style="--url: url(./rss.svg)"
+        href="https://rifqiabidin.github.io/index.xml"
+        target="_blank"
+        rel="alternate"
+      >
+        rss
+      </a>
+      
+    </nav>
+    
+  </div>
+</header>
+
+
+    <main
+      class="prose prose-neutral relative mx-auto min-h-[calc(100%-9rem)] max-w-3xl px-8 pb-16 pt-12 dark:prose-invert"
+    >
+      
+
+<article>
+  <header class="mb-16">
+    <h1 class="!my-0 pb-2.5">Join Sql</h1>
+
+    
+    <div class="text-sm antialiased opacity-60">
+      
+      <time>Nov 10, 2024</time>
+      
+      
+      
+      
+    </div>
+    
+  </header>
+
+  <section><p>Dalam praktik di dunia nyata, data yang dibutuhkan seringkali berasal dari berbagai tabel sumber. Pada tulisan ini, saya akan membahas tentang <code>JOIN</code> yang merupakan cara untuk menggabungkan satu atau lebih tabel dengan kesamaan kolom. PostgreSQL mendukung kita untuk melakukan beberapa operasi seperti <code>INNER JOIN</code>, <code>LEFT JOIN</code>, <code>RIGHT JOIN</code>, <code>FULL OUTER JOIN</code>, <code>CROSS JOIN</code>, <code>NATURAL JOIN</code>, dan jenis khusus yang disebut <code>SELF-JOIN</code>.</p>
+<h2 id="inner-join">INNER JOIN</h2>
+<p>Operasi <code>INNER JOIN</code> akan memberikan hasil berupa baris yang memiliki kesamaan nilai pada kolom di setiap tabelnya. Berikut sintaksis penggunaan <code>INNER JOIN</code>:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sql" data-lang="sql"><span style="color:#66d9ef">SELECT</span>
+	daftar_kolom
+<span style="color:#66d9ef">FROM</span>
+	tabel1 t1
+<span style="color:#66d9ef">INNER</span> <span style="color:#66d9ef">JOIN</span> tabel2 t2
+<span style="color:#66d9ef">ON</span>
+	t1.nama_kolom <span style="color:#f92672">=</span> t2.nama_kolom
+</code></pre></div><p>Jika kedua nama kolom baik pada tabel 1 maupun tabel 2 bernilai sama, maka kamu bisa menggunakan kata kunci <code>USING</code> dengan sintaksis berikut:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sql" data-lang="sql"><span style="color:#66d9ef">SELECT</span>
+	daftar_kolom
+<span style="color:#66d9ef">FROM</span>
+	tabel1 t1
+<span style="color:#66d9ef">INNER</span> <span style="color:#66d9ef">JOIN</span> tabel2 t2
+		<span style="color:#66d9ef">USING</span>(nama_kolom)
+</code></pre></div><p>Untuk setipa baris di <code>tabel1</code>, inner join akan membandingkan nilai pada <code>nama_kolom</code> dengan nilai di setiap baris pada <code>tabel2</code>. Jika nilai di kedua tabel bernilai sama, inner join akan membuat satu baris baru termasuk semua kolom dari kedua tabel dan menaruhnya di hasil kueri. Sebaliknya, jika nilai kolom di kedua tabel memiliki nilai yang berbeda maka pasangan baris dari kedua tabel tidak akan diproses. Proses tersebut diulangi ke baris berikutnya sehingga semua baris pada tabel selesai dicocokkan.</p>
+<h3 id="inner-join-untuk-menggabungkan-dua-tabel">INNER JOIN untuk menggabungkan dua tabel</h3>
+<p>Pada contoh kali ini, saya akan menggabungkan dua tabel dari database <code>dvdrental</code> yakni tabel <code>film_actor</code> dan tabel <code>actor</code> dengan kolom sebagai berikut:</p>
+<pre tabindex="0"><code>table_name|column_name|
+----------+-----------+
+film_actor|actor_id   |
+film_actor|film_id    |
+film_actor|last_update|
+</code></pre><pre tabindex="0"><code>table_name|column_name|
+----------+-----------+
+actor     |actor_id   |
+actor     |last_update|
+actor     |first_name |
+actor     |last_name  |
+</code></pre><p>dari kedua tabel tersebut terdapat kesamaan kolom <code>actor_id</code>. Dengan melakukan operasi inner join, kita dapat mengetahui nama aktor yang bermain pada suatu film. Berikut contoh kueri untuk mendapatkan daftar nama aktor yang bermain pada film dengan id tertentu.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sql" data-lang="sql"><span style="color:#66d9ef">SELECT</span>
+	fa.film_id ,
+	a.first_name <span style="color:#f92672">||</span> <span style="color:#e6db74">&#39; &#39;</span> <span style="color:#f92672">||</span> a.last_name <span style="color:#66d9ef">AS</span> actor_name
+<span style="color:#66d9ef">FROM</span>
+	film_actor fa
+<span style="color:#66d9ef">INNER</span> <span style="color:#66d9ef">JOIN</span> actor a <span style="color:#66d9ef">USING</span>(actor_id)
+<span style="color:#66d9ef">WHERE</span>
+	fa.film_id <span style="color:#f92672">=</span> <span style="color:#ae81ff">8</span>
+</code></pre></div><p>Berikut hasil kueri:</p>
+<pre tabindex="0"><code>film_id|actor_name |
+-------+-----------+
+      8|Fay Kilmer |
+      8|Gene Willis|
+      8|Susan Davis|
+      8|Lucille Dee|
+</code></pre><h3 id="inner-join-untuk-menggabungkan-tiga-tabel">INNER JOIN untuk menggabungkan tiga tabel</h3>
+<p>Kalau sebelumnya kita sudah berhasil mengetahui nama aktor yang bermain pada film tertentu. Selanjutnya saya akan tunjukkan cara menggabungkan tiga tabel untuk mengetahui judul film apa yang diperankan oleh nama aktornya. Konsepnya sama seperti sebelumnya, kamu cukup menambahkan tabel dan kolom yang menjadi kunci untuk melakukan join.</p>
+<p>Berikut contoh kueri untuk mengetahui nama film, dan nama lengkap dari para aktornya. Pada kueri ini saya akan menggabungkan tabel <code>film</code>, <code>film_actor</code> dan <code>actor</code>.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sql" data-lang="sql"><span style="color:#66d9ef">SELECT</span>
+	f.title ,
+	a.first_name <span style="color:#f92672">||</span> <span style="color:#e6db74">&#39; &#39;</span> <span style="color:#f92672">||</span> a.last_name <span style="color:#66d9ef">AS</span> actor_name
+<span style="color:#66d9ef">FROM</span>
+	film f
+<span style="color:#66d9ef">INNER</span> <span style="color:#66d9ef">JOIN</span> film_actor fa
+		<span style="color:#66d9ef">USING</span>(film_id)
+<span style="color:#66d9ef">INNER</span> <span style="color:#66d9ef">JOIN</span> actor a
+		<span style="color:#66d9ef">USING</span>(actor_id)
+<span style="color:#66d9ef">WHERE</span>
+	fa.film_id <span style="color:#f92672">=</span> <span style="color:#ae81ff">8</span>
+<span style="color:#66d9ef">ORDER</span> <span style="color:#66d9ef">BY</span> <span style="color:#ae81ff">2</span>
+</code></pre></div><h2 id="left-join">LEFT JOIN</h2>
+<p>Penggunaan <code>LEFT JOIN</code> akan menggabungkan tabel kiri dengan tabel kanan dan akan mengembalikkan baris dari tabel kiri yang mungkin punya atau tidak punya kesamaan nilai pada tabel kanan.</p>
+<p>Berikut contoh kueri untuk menampilan daftar film yang stoknya sedang kosong di inventori. Saya akan melakukan <code>LEFT JOIN</code> terhadap tabel <code>film</code> dan <code>inventory</code> dengan join key berupa kolom <code>film_id</code>.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sql" data-lang="sql"><span style="color:#66d9ef">SELECT</span>
+	f.film_id ,
+	f.title ,
+	i.inventory_id
+<span style="color:#66d9ef">FROM</span>
+	film f
+<span style="color:#66d9ef">LEFT</span> <span style="color:#66d9ef">JOIN</span> inventory i
+		<span style="color:#66d9ef">USING</span>(film_id)
+<span style="color:#66d9ef">WHERE</span>
+	i.film_id <span style="color:#66d9ef">IS</span> <span style="color:#66d9ef">NULL</span>
+<span style="color:#66d9ef">ORDER</span> <span style="color:#66d9ef">BY</span>
+	f.title;
+</code></pre></div><p>hasil kueri:</p>
+<pre tabindex="0"><code>film_id|title                 |inventory_id|
+-------+----------------------+------------+
+     14|Alice Fantasia        |      [NULL]|
+     33|Apollo Teen           |      [NULL]|
+     36|Argonauts Town        |      [NULL]|
+     38|Ark Ridgemont         |      [NULL]|
+     41|Arsenic Independence  |      [NULL]|
+     87|Boondock Ballroom     |      [NULL]|
+</code></pre><p>Pada kueri tersebut, akan dihasilkan film yang ada di tabel <code>film</code> terlepas dari kondisi apakah ada baris dengan nilai <code>film_id</code> yang sama dengan nilai <code>film_id </code>di tabel <code>inventory</code>.</p>
+<h2 id="right-join">RIGHT JOIN</h2>
+<p>Konsep yang dilakukan oleh <code>RIGHT JOIN</code> sebenarnya mirip dengan <code>LEFT JOIN</code> namun posisi tabelnya yang ditukar. Pada praktiknya fungsi ini lebih jarang digunakan dibanding dengan <code>LEFT JOIN</code> yang lebih umum.</p>
+<p>Berikut contoh kueri untuk memberikan hasil yang sama dengan contoh kueri pada bagian <code>LEFT JOIN</code> sebelumnya.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sql" data-lang="sql"><span style="color:#66d9ef">SELECT</span>
+	f.film_id ,
+	f.title ,
+	i.inventory_id
+<span style="color:#66d9ef">FROM</span>
+	inventory i
+<span style="color:#66d9ef">RIGHT</span> <span style="color:#66d9ef">JOIN</span> film f 
+		<span style="color:#66d9ef">USING</span>(film_id)
+<span style="color:#66d9ef">WHERE</span>
+	i.film_id <span style="color:#66d9ef">IS</span> <span style="color:#66d9ef">NULL</span>
+<span style="color:#66d9ef">ORDER</span> <span style="color:#66d9ef">BY</span>
+	f.title;
+</code></pre></div><h2 id="self-join">SELF JOIN</h2>
+<p>Sesuai dengan namanya, self join merupakan istilah untuk melakukan proses join pada tabel yang sama. Kamu dapat menggunakaan nama alias yang berbeda pada tabel yang sama untuk melakukan self join. Self join biasanya digunakan untuk melakukan pengecekan kondisi pada tabel seperti mencari kondisi yang sama atau yang berhubungan dengan hirarki. Berikut contoh kueri untuk mencari film dengan durasi dan durasi peminjaman yang sama.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sql" data-lang="sql"><span style="color:#66d9ef">SELECT</span>
+	f1.title,
+	f2.title ,
+	f1.<span style="color:#66d9ef">length</span>,
+	f1.rental_duration
+<span style="color:#66d9ef">FROM</span>
+	film f1
+<span style="color:#66d9ef">INNER</span>
+<span style="color:#66d9ef">JOIN</span> film f2 <span style="color:#66d9ef">ON</span>
+	f1.film_id <span style="color:#f92672">&gt;</span> f2.film_id <span style="color:#75715e">-- agar dua judul berbeda bisa dibandingkan
+</span><span style="color:#75715e"></span>	<span style="color:#66d9ef">AND</span> f1.<span style="color:#66d9ef">length</span> <span style="color:#f92672">=</span> f2.<span style="color:#66d9ef">length</span>
+	<span style="color:#66d9ef">AND</span> f1.rental_duration <span style="color:#f92672">=</span> f2.rental_duration 
+</code></pre></div><p>hasil kueri:</p>
+<pre tabindex="0"><code>title                  |title                      |length|rental_duration|
+-----------------------+---------------------------+------+---------------+
+Arabia Dogma           |Airplane Sierra            |    62|              6|
+Dying Maker            |Antitrust Tomatoes         |   168|              5|
+Baby Hall              |Apollo Teen                |   153|              5|
+Banger Pinocchio       |Attacks Hate               |   113|              5|
+Bilko Anonymous        |Behavior Runaway           |   100|              3|
+Born Spinal            |Anonymous Human            |   179|              7|
+</code></pre><h2 id="full-outer-join">FULL OUTER JOIN</h2>
+<p>Proses <code>FULL OUTER JOIN</code> akan menggabungkan dua tabel atau lebih dan akan menghasilkan semua baris dari semua tabel, baik yang memiliki kesesuaian nilai maupun yang tidak. Kata kunci <code>OUTER</code> bersifat <strong>opsional</strong> sehingga jenis join ini dikenal juga dengan <code>FULL JOIN</code>.</p>
+<p>Sebagai contoh, saya akan melakukan operasi <code>FULL OUTER JOIN</code> menggunakan tabel <code>dosen</code> dan <code>matakuliah</code>.</p>
+<pre tabindex="0"><code>(tabel dosen)
+dosen_id|nama_dosen|mk_id |
+--------+----------+------+
+       1|Diluc     |     1|
+       2|Rosaria   |     1|
+       3|Keqing    |     2|
+       4|Zhongli   |     3|
+       5|Sayu      |     4|
+       6|Clorinde  |[NULL]|
+</code></pre><pre tabindex="0"><code>(tabel matakuliah)
+mk_id|nama_mk          |
+-----+-----------------+
+    1|Database         |
+    2|Algoritma        |
+    3|Sistem Operasi   |
+    4|Kecerdasan Buatan|
+</code></pre><p>Berikut adalah contoh kueri <code>FULL JOIN</code> dari kedua tabel tersebut:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sql" data-lang="sql"><span style="color:#66d9ef">SELECT</span>
+	nama_dosen,
+	nama_mk
+<span style="color:#66d9ef">FROM</span>
+	dosen
+<span style="color:#66d9ef">FULL</span> <span style="color:#66d9ef">JOIN</span> matakuliah
+		<span style="color:#66d9ef">USING</span>(mk_id);
+</code></pre></div><p>Berikut hasil kuerinya:</p>
+<pre tabindex="0"><code>nama_dosen|nama_mk          |
+----------+-----------------+
+Diluc     |Database         |
+Rosaria   |Database         |
+Keqing    |Algoritma        |
+Zhongli   |Sistem Operasi   |
+Sayu      |Kecerdasan Buatan|
+Clorinde  |[NULL]           |
+</code></pre><p>baris dengan <code>nama_dosen</code> bernilai <code>Clorinde</code> tetap ditampilkan pada hasil kueri meskipun baris tersebut tidak memiliki nilai pada kolom <code>mk_id</code>.</p>
+<h2 id="cross-join">CROSS JOIN</h2>
+<p>Dalam PostgreSQL, <code>CROSS JOIN</code> memungkinkan kamu untuk menggabungkan dua tabel dengan mengkombinasikan setiap baris dari tabel pertama dengan setiap baris pada tabel kedua. Dalam teori himpunan, bisa dikatakan bahwa hasil dari <code>CROSS JOIN</code> adalah perkalian kartesian dari baris di kedua tabel.</p>
+<p>Sebagai contoh, saya akan melakukan CROSS JOIN dari tabel <code>dosen</code> dan <code>matakuliah</code> yang sebelumnya digunakan sebagai contoh namun kali ini saya hanya akan mengambil masing-masing kolom <code>nama_dosen</code> dan <code>nama_mk</code>. Berikut contoh kueri untuk mendapatkan hasil tersebut:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sql" data-lang="sql"><span style="color:#66d9ef">SELECT</span>
+	<span style="color:#f92672">*</span>
+<span style="color:#66d9ef">FROM</span>
+	(
+	<span style="color:#66d9ef">SELECT</span>
+		nama_dosen
+	<span style="color:#66d9ef">FROM</span>
+		dosen) <span style="color:#66d9ef">AS</span> dosen
+<span style="color:#66d9ef">CROSS</span> <span style="color:#66d9ef">JOIN</span> (
+	<span style="color:#66d9ef">SELECT</span>
+		nama_mk
+	<span style="color:#66d9ef">FROM</span>
+		matakuliah) <span style="color:#66d9ef">AS</span> matakuliah;
+</code></pre></div><p>berikut cuplikan hasil kuerinya:</p>
+<pre tabindex="0"><code>nama_dosen|nama_mk          |
+----------+-----------------+
+Diluc     |Database         |
+Diluc     |Algoritma        |
+Diluc     |Sistem Operasi   |
+Diluc     |Kecerdasan Buatan|
+Rosaria   |Database         |
+Rosaria   |Algoritma        |
+(24 Rows)
+</code></pre><p>Karena terdapat 6 jenis nilai di <code>nama_dosen</code> dan 4 jenis nilai di <code>nama_mk</code> maka akan dihasilkan 6 * 4 = 24 baris pada hasil kueri.</p>
+<h2 id="natural-join">NATURAL JOIN</h2>
+<p>Konsep <code>NATURAL JOIN</code> akan membuat join secara implisit berdasarkan kolom yang digunakan. Berikut contoh kueri <code>NATURAL JOIN</code> menggunakan tabel <code>dosen</code> dan <code>matakuliah</code> seperti sebelumnya:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sql" data-lang="sql"><span style="color:#66d9ef">SELECT</span>
+	<span style="color:#f92672">*</span>
+<span style="color:#66d9ef">FROM</span>
+	dosen
+<span style="color:#66d9ef">NATURAL</span> <span style="color:#66d9ef">JOIN</span> matakuliah;
+</code></pre></div><p>Hasil kueri:</p>
+<pre tabindex="0"><code>mk_id |dosen_id|nama_dosen|nama_mk          |
+------+--------+----------+-----------------+
+     1|       1|Diluc     |Database         |
+     1|       2|Rosaria   |Database         |
+     2|       3|Keqing    |Algoritma        |
+     3|       4|Zhongli   |Sistem Operasi   |
+     4|       5|Sayu      |Kecerdasan Buatan|
+</code></pre><p>Kueri yang diberikan pada contoh di atas ekivalen dengan <code>INNER JOIN</code> dengan kolom <code>mk_id</code> sebagai key joinnya.</p>
+</section>
+
+  
+  
+
+  
+  
+  
+  
+  <nav class="mt-24 flex rounded-lg bg-black/[3%] text-lg dark:bg-white/[8%]">
+    
+    
+    <a
+      class="ml-auto flex w-1/2 items-center justify-end rounded-r-md p-6 pl-3 font-semibold no-underline hover:bg-black/[2%] dark:hover:bg-white/[3%]"
+      href="https://rifqiabidin.github.io/post/filtering-data-sql/"
+      ><span>Filtering Data SQL</span><span class="ml-1.5">→</span></a
+    >
+    
+  </nav>
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+</article>
+
+
+    </main>
+
+    <footer
+  class="opaco mx-auto flex h-[4.5rem] max-w-3xl items-center px-8 text-[0.9em] opacity-60"
+>
+  <div class="mr-auto">
+    &copy; 2024
+    <a class="link" href="https://rifqiabidin.github.io/">Records</a>
+  </div>
+  <a class="link mx-6" href="https://gohugo.io/" rel="noopener" target="_blank"
+    >Powered by Hugo️️</a
+  >️
+  <a
+    class="link"
+    href="https://github.com/nanxiaobei/hugo-paper"
+    rel="noopener"
+    target="_blank"
+    >✎ Paper</a
+  >
+</footer>
+
+  </body>
+</html>
